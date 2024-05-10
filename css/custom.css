@@ -1,0 +1,117 @@
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: transparent !important;
+}
+
+button.generate-password {
+  height: 60px;
+  width: 100%;
+  border-radius: 30px;
+  background-image: linear-gradient(to left, #f56576, #ce142a 100%);
+  text-align: center;
+  color: #ffffff;
+  transition: 0.3s;
+  outline: 0;
+  border: none;
+}
+
+.btn_blue,
+.btn_green {
+  background-color: #5cb324;
+  z-index: 10;
+}
+
+.btn_calculator.btn_green:hover {
+  background-color: #5cb324;
+  background-image: linear-gradient(to right, #5cb324, #9cda3c);
+  box-shadow: none;
+  outline: 0;
+}
+
+.profit-calc .calc-payout {
+  background-image: linear-gradient(68deg, #0d3390 0%, #b0c7ff 100%);
+}
+
+.profit-calc .logo-circle {
+  background-color: #5cb324;
+}
+
+.btn_profit-calc:before {
+  border-color: rgba(13, 51, 144, 0.15);
+}
+
+.profit-calc .calc-box .calc-range:before {
+  background-color: #5cb324;
+}
+
+.btn_profit-calc {
+  bottom: 90px;
+  right: 15px;
+}
+
+.grecaptcha-badge {
+  display: none !important;
+}
+
+.btn_profit-calc {
+  bottom: 15px;
+  right: 15px;
+}
+
+@media (min-width: 768px) {
+  .btn_profit-calc {
+    bottom: 90px;
+    right: 15px;
+  }
+  .grecaptcha-badge {
+    display: block !important;
+  }
+  .btn_profit-calc {
+    bottom: 90px;
+    right: 15px;
+  }
+}
+input:valid:not(:placeholder-shown) {
+  padding-right: 0;
+}
+.alerts-border {
+  border: 5px transparent solid;
+  animation: blink 2s;
+  animation-iteration-count: 3;
+}
+
+@keyframes blink {
+  50% {
+    border-color: #177300;
+  }
+}
+
+.user-online {
+  box-shadow: 0px 0px 10px 10px #40d15c;
+  animation: pulseglow 2s;
+  animation-iteration-count: 3;
+}
+
+@keyframes pulseglow {
+  50% {
+    box-shadow: 0px 0px 5px 5px #40d15c;
+  }
+}
+a:hover {
+  text-decoration: none;
+}
+
+.container-big {
+  max-width: 1440px;
+}
+.nopassfield {
+  display: none !important;
+}
+@media (max-width: 575px) {
+  .d-xs-none {
+    display: none;
+  }
+}
+.testifix {
+  font-weight: normal !important;
+  margin-right: 10px;
+}

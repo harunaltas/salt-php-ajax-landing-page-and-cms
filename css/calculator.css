@@ -1,0 +1,637 @@
+.btn_calculator {
+    width: 90%;
+    line-height: 50px;
+    padding: 0 20px;
+    color: white;
+    font-family: Open Sans, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 119, 126, 0.75);
+    border: none;
+    border-radius: 25px;
+    transition: 0.15s ease;
+}
+.btn_green {
+    background-color: green;
+}
+.btn_blue {
+    background-color: #fa6400;
+}
+.btn_calculator:hover {
+    filter: brightness(100%);
+    cursor: pointer;
+}
+.btn_calculator:focus {
+    outline: 0;
+}
+.btn_profit-calc {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    padding: 0px;
+    width: auto;
+    max-width: 341px;
+    border-radius: 100px;
+    margin-left: 40px;
+    filter: drop-shadow(0px 15px 30px rgba(18, 17, 66, 0.1));
+    z-index: 1000;
+    animation: shake 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+    transform: translate3d(0, 0, 0);
+}
+.btn_profit-calc:before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    top: -8px;
+    left: -8px;
+    /* background-color: rgba(22, 212, 98, 0.15); */
+    border-radius: 100px;
+    border: solid;
+    border-color: rgba(22, 212, 98, 0.15);
+    border-width: 10px;
+}
+@media screen and (min-width: 768px) {
+    .btn_calculator {
+        width: auto;
+        padding: 0 30px;
+    }
+    .btn_profit-calc {
+        bottom: 40px;
+        right: 40px;
+        padding: 10px;
+    }
+    .btn_profit-calc .payout-box__title {
+        font-size: 21px;
+        line-height: 1.14;
+        position: relative;
+    }
+    .btn_profit-calc .payout-box__title:before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: -25px;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        background-color: #16d462;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .btn_profit-calc {
+        /* width: 100%; */
+        font-size: 21px;
+        bottom: 60px;
+        right: 60px;
+        padding: 20px;
+        /* padding-left: 40px; */
+    }
+}
+@keyframes shake {
+    5%,
+    45% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    10%,
+    40% {
+        transform: translate3d(2px, 0, 0);
+    }
+    15%,
+    25%,
+    35% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    20%,
+    30% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+.profit-calc {
+    font-family: Open Sans, sans-serif;
+    background-color: white;
+    color: black;
+    position: relative;
+}
+.profit-calc__title {
+    font-size: 32px;
+    line-height: 1.25;
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.profit-calc__txt {
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+    opacity: 0.5;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profit-calc .calc-box {
+    display: block;
+}
+.profit-calc .calc-payout {
+    color: white;
+    background-color: rgb(250, 100, 0, 0.85);
+    background-color: #fa6400;
+    padding: 30px 20px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 15px 30px rgba(18, 17, 66, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.profit-calc .logo-circle {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: green;
+}
+.profit-calc .calc-range {
+    padding: 30px 20px 20px;
+    background-color: white;
+    box-shadow: 0px 15px 30px rgba(18, 17, 66, 0.1);
+    border-radius: 10px;
+}
+.profit-calc .calc-range__deposit {
+    position: relative;
+    margin-bottom: 40px;
+}
+.profit-calc .calc-range__time {
+    position: relative;
+}
+.profit-calc .calc-range__title {
+    display: inline-block;
+    font-family: Open Sans, sans-serif;
+    font-size: 15px;
+    position: relative;
+    /* bottom: 1px; */
+    margin-bottom: 0px;
+}
+.profit-calc .calc-range-input {
+    display: inline-block;
+    color: black;
+    position: relative;
+    top: 1px;
+    margin-left: 20px;
+}
+.profit-calc .calc-range-input span {
+    font-size: 16px;
+    line-height: 51px;
+    /* position: absolute; */
+    display: inline-block;
+    opacity: 0.5;
+}
+.profit-calc .calc-range-input span.currency {
+    left: 5px;
+    top: -1px;
+}
+.profit-calc .calc-range-input span.time-unit {
+    right: 0;
+    top: 0;
+}
+.profit-calc .calc-range-input input {
+    font-family: Open Sans, sans-serif;
+    font-size: 16px;
+    color: black;
+    display: inline-block;
+    height: 50px;
+    line-height: 51px;
+    border: 0px;
+    outline: 0px;
+    width: auto;
+    caret-color: blue;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(18, 17, 66, 0.2);
+}
+.profit-calc .calc-range-input input:focus,
+.profit-calc .calc-range-input input:hover {
+    border-bottom: 1px solid blue;
+    background: bg-grey;
+}
+.profit-calc .calc-range-input input.calc-range-input__deposit {
+    /* padding-left: 20px; */
+    max-width: 60px;
+    font-family: Open Sans, sans-serif;
+}
+.profit-calc .calc-range-input input.calc-range-input__time {
+    max-width: 80px;
+    /* padding-right: 45px; */
+    text-align: right;
+    font-family: Open Sans, sans-serif;
+}
+.profit-calc .calc-range-input__deposit {
+    line-height: 51px;
+}
+.profit-calc .calc-range-input__time {
+    line-height: 51px;
+}
+.profit-calc .slider-values {
+    position: absolute;
+    font-family: Open Sans, sans-serif;
+    font-size: 14px;
+    top: 58px;
+    opacity: 0.25;
+    line-height: 1;
+}
+.profit-calc .slider-values.slider-min {
+    left: 0px;
+}
+.profit-calc .slider-values.slider-max {
+    right: 0px;
+}
+.profit-calc .flexr-btw {
+    display: inline-block;
+    border-bottom: 1px solid rgba(18, 17, 66, 0.2);
+    box-sizing: border-box;
+    margin-bottom: 26px;
+}
+.profit-calc .flexr-btw form {
+    display: flex;
+    align-items: center;
+}
+.profit-calc input:not(:hover) + .current-value-box {
+    opacity: 0;
+    pointer-events: none;
+}
+.profit-calc input:not(:hover) + .current-value-box .current-value-box__num {
+    bottom: 41px;
+    transition: bottom 0.25s ease;
+}
+.profit-calc .current-value-box {
+    display: block;
+    width: calc(100% - 32px);
+    padding: 0 16px;
+    position: relative;
+    left: 16px;
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+    padding: 0 10px;
+    top: 95px;
+    position: absolute;
+}
+.profit-calc .current-value-box__num {
+    display: inline-block;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    line-height: 1;
+    padding: 6px 10px;
+    position: absolute;
+    bottom: 36px;
+    font-size: 20px;
+    transition: bottom 0.25s ease-in-out;
+    white-space: nowrap;
+    filter: drop-shadow(0px 15px 30px rgba(18, 17, 66, 0.1));
+}
+.profit-calc .current-value-box__num:before {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 17px;
+    border-radius: 4px;
+    background-color: black;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    z-index: -1;
+}
+.payout-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.payout-box__title {
+    font-family: Open Sans, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+}
+.payout-box__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    align-items: center;
+    border: none;
+}
+.payout-box__icon img {
+    filter: drop-shadow(0px 10px 10px rgba(2, 28, 120, 0.15));
+    width: 80%;
+}
+.payout-box__icon1 {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+}
+.payout-box__amount {
+    font-family: Open Sans, sans-serif;
+    font-size: 28px;
+    line-height: 1.14;
+    margin-bottom: 20px;
+}
+.close-modal_profit-calc {
+    position: absolute;
+    top: -1px;
+    right: 3px;
+    font-size: 40px;
+    line-height: 1;
+    font-family: initial;
+    font-weight: lighter;
+    opacity: 0.6;
+    padding: 0 5px;
+    cursor: pointer;
+}
+.close-modal_profit-calc:hover {
+    opacity: 1;
+}
+@media screen and (max-width: 375px) {
+    .profit-calc {
+        margin: 2px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .profit-calc {
+        background-image: url(../images/bg-ellipse.svg);
+        background-repeat: no-repeat;
+        background-position: center top -300px;
+    }
+    .profit-calc__title {
+        font-size: 54px;
+        line-height: 60px;
+        margin-bottom: 15px;
+        font-family: Open Sans, sans-serif;
+    }
+    .profit-calc__txt {
+        margin-bottom: 70px;
+        font-family: Open Sans, sans-serif;
+    }
+    .profit-calc .calc-box {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .profit-calc .calc-box > * {
+        width: 100%;
+    }
+    .profit-calc .calc-box .calc-payout {
+        padding: 30px;
+        max-width: 400px;
+        min-width: 300px;
+        margin-right: 40px;
+        margin-bottom: 0;
+    }
+    .profit-calc .calc-box .calc-range {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 32px;
+        max-width: 100%;
+        position: relative;
+    }
+    .profit-calc .calc-box .calc-range:before {
+        position: absolute;
+        content: "";
+        height: 10px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #fa6400;
+        border-radius: 10px 10px 0 0;
+        z-index: 1;
+    }
+    .profit-calc .close-modal_profit-calc {
+        font-size: 50px;
+        top: 28px;
+        right: 40px;
+        box-shadow: none;
+    }
+    .payout-box__amount {
+        font-size: 54px;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .profit-calc {
+        background-position: right -185px top -200px;
+    }
+    .profit-calc .calc-box .calc-payout {
+        min-width: 400px;
+        padding: 30px 40px 40px;
+    }
+    .profit-calc .calc-box .calc-range {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .profit-calc .close-modal_profit-calc {
+        font-size: 50px;
+        top: 35px;
+        right: 50px;
+    }
+    .payout-box__amount {
+        font-size: 74px;
+    }
+    .payout-box__icon {
+        width: 64px;
+        height: 64px;
+    }
+}
+body.disabled-scroll {
+    /* position: fixed; */
+    height: 100%;
+    overflow: hidden;
+}
+.modal {
+    position: fixed;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: 1100;
+    min-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.modal-box {
+    padding: 30px 16px;
+    margin: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: block;
+    box-shadow: 0px 70px 70px rgba(74, 10, 155, 0.25);
+}
+@media screen and (min-width: 768px) {
+    .modal-box {
+        margin: 40px;
+        padding: 60px 40px;
+    }
+    .profit-calc .calc-range__title {
+        font-size: 21px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .modal-box {
+        max-width: 1060px;
+        padding: 40px;
+        margin: 7% auto;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .modal-box {
+        padding: 60px;
+    }
+}
+.height-helper {
+    min-height: 40px;
+    display: inline;
+    vertical-align: -moz-middle-with-baseline;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 100%;
+    transition: 0.2s;
+    position: relative;
+    z-index: 10;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 100%;
+    transition: 0.2s;
+    position: relative;
+    z-index: 10;
+}
+input[type="range"]:focus {
+    outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    border: 0;
+    cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    position: relative;
+    z-index: 20;
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    background-color: #fff;
+    background-image: url("../images/mdi_unfold_more2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    border: 1px solid rgba(18, 17, 66, 0.2);
+    box-shadow: 0px 15px 30px rgba(18, 17, 66, 0.1);
+    cursor: pointer;
+    margin-top: -14px;
+}
+input[type="range"]::-moz-range-thumb {
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    background: #fff;
+    background-image: url(../images/mdi_unfold_more2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    border: 1px solid rgba(18, 17, 66, 0.2);
+    box-shadow: 0px 15px 30px rgba(18, 17, 66, 0.1);
+    cursor: pointer;
+    margin-top: -14px;
+}
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: rgba(18, 17, 66, 0.2);
+}
+input[type="range"]::-moz-range-track + span.current-value-box__num {
+    border: 30px solid red;
+}
+input[type="range"]::-moz-range-progress {
+    background-color: blue;
+    height: 4px;
+}
+input[type="range"].custom-range-slider::-ms-track {
+    background-image: none;
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-width: 15px 0;
+    color: transparent;
+    /*remove default tick marks*/
+    overflow: visible;
+}
+input[type="range"].custom-range-slider::-ms-thumb {
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    background: #fff;
+    background-image: url(../images/mdi_unfold_more2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    border: 1px solid rgba(18, 17, 66, 0.2);
+    box-shadow: 0px 15px 30px rgba(18, 17, 66, 0.1);
+    cursor: pointer;
+    margin-top: 0px;
+    transform: scale(1) !important;
+    z-index: 20;
+}
+input[type="range"]::-ms-fill-lower,
+input[type="range"]::-ms-fill-lower {
+    background: #3875ef;
+    border: 0 solid transparent;
+}
+input[type="range"]::-ms-fill-upper,
+input[type="range"]:focus::-ms-fill-upper {
+    background: rgba(18, 17, 66, 0.2);
+    border: 0 solid transparent;
+}
+@media screen and (max-width: 1280px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .btn_profit-calc {
+        /* width: 100%; */
+        font-size: 21px;
+        bottom: 60px;
+        right: 60px;
+        padding: 20px;
+        /* padding-left: 40px; */
+    }
+    .extend {
+        display: none;
+    }
+    .btn_profit-calc:hover {
+        width: 100%;
+        padding-left: 40px;
+    }
+    .btn_profit-calc:hover .extend {
+        display: block;
+    }
+}

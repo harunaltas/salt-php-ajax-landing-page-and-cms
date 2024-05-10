@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+.skillboard-wrapper {
+  width: 100%;
+  background-image: linear-gradient(251deg, #f5f9fc 100%, #edeff3 0%);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+.skillboard h2 {
+  font-size: 40px;
+  width: 100%;
+  margin-top: 60px;
+}
+.phoneinpt::-webkit-input-placeholder {
+  text-align: left;
+  padding-left:20px;
+}
+
+.skillboard h3 {
+  display: flex;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.4px;
+  width: 72%;
+  color: #0d3390;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.skillboard {
+  color: #0d3390;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.skill-text,
+.skill-wrapper {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin-bottom: 20px;
+  background-size: contain;
+}
+.skill {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 19px 20px 0 rgb(13 51 144 / 15%);
+  border-radius: 24px;
+  border: solid 1px rgba(205, 208, 227, 0.3);
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 18%;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+.skills p {
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.11;
+  letter-spacing: normal;
+}
+.skills span {
+  font-size: 14px;
+}
+.skill-img {
+  display: flex;
+  position: relative;
+  width: 66%;
+  line-height: 1.2;
+}
+.skill-img img {
+  width: 100%;
+}
+.skill-img-2 {
+  margin-top: 10px;
+}
+.skill-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+}
+.skill-p {
+  display: flex;
+  flex-direction: column;
+}
+.check {
+padding:10px;
+display:flex;
+}
+.check label{
+font-size:13px;
+padding-left:10px;
+color: #0d3390;
+}
+@media screen and (max-width: 1600px) {
+  .skill-img {
+    width: 100%;
+  }
+  .skill {
+    padding: 10;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .skill {
+    width: 40%;
+  }
+  .skillboard {
+    width: 80%;
+  }
+  .skills p {
+    font-size: 22px;
+  }
+  .skills span {
+    font-size: 14px;
+  }
+  .skill-img {
+    width: 70%;
+  }
+  .skill-wrapper {
+    top: 40%;
+  }
+}
+@media screen and (max-width: 891px) {
+  .skill {
+    width: 45%;
+    padding: 0;
+  }
+  .skillboard {
+    width: 100%;
+    margin-left: -10px;
+  }
+  .skillboard h2 {
+    font-size:28;
+}
+  .skillboard h3 {
+    font-size:20;
+}
+  .skills p {
+    font-size: 18px;
+  }
+  .skills span {
+    font-size: 10px;
+  }
+  .skill-img {
+    width: 100%;
+  }
+}
